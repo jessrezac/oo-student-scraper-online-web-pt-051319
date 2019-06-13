@@ -36,7 +36,7 @@ class Scraper
       platform = social.css("img").attribute("src").value.gsub(/.+\//, "").gsub("-icon.png", "")
       platform = "blog" if platform == "rss"
       url = social.attribute("href").value
-      if platform == "blog" || "twitter" || "linkedin" || "github"
+      if platform == "blog" || platform == "twitter" || platform == "linkedin" || platform == "github"
         student[platform.to_sym] = url
       end
     end
