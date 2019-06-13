@@ -39,15 +39,6 @@ class Scraper
       student[platform.to_sym] = url
     end
 
-
-    # twitter: doc.css(".social-icon-container a").attribute("href").value,
-    # linkedin: ,
-    # github: ,
-    # blog: ,
-    # profile_quote: doc.css(".profile-quote").text,
-    # bio: doc.css(".bio-content .description-holder p").text
-
-
     student
 
   end
