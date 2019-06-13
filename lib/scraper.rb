@@ -34,6 +34,7 @@ class Scraper
 
     student_socials.each do |social|
       platform = social.css("img").attribute("src").value.gsub(/.+\//, "").gsub("-icon.png", "")
+      binding.pry
       platform = "blog" if platform == "rss"
       url = social.attribute("href").value
       student[platform.to_sym] = url
